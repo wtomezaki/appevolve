@@ -45,6 +45,8 @@ module.exports = {
     'consistent-return': 'off',
     'react/jsx-wrap-multilines': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
   },
   settings: {
     'import/resolver': {
