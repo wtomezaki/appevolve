@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Divider, Drawer, Hidden, List, makeStyles, useTheme } from '@material-ui/core';
+import { Box, Drawer, Hidden, List, makeStyles, useTheme } from '@material-ui/core';
 import SidebarItem from './SidebarItem';
 import {
   ChartIcon,
