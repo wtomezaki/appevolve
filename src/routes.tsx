@@ -7,7 +7,7 @@ const Routes = memo(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Dashboard} />
-        <Route exact path="/orders" component={Dashboard} />
+        <Route exact path="/orders" component={Orders} />
       </Switch>
     </BrowserRouter>
   )
