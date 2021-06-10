@@ -12,6 +12,7 @@ const theme = createMuiTheme({
     MuiListItem: {
       root: {
         background: 'transparent',
+        borderLeft: '5px solid transparent',
         '&$selected': {
           height: '50px',
           backgroundColor: 'rgba(255, 82, 70, 0.25)',
@@ -24,6 +25,11 @@ const theme = createMuiTheme({
         fontWeight: 600,
         fontSize: '16px',
         lineHeight: '27px',
+      },
+    },
+    MuiAvatar: {
+      root: {
+        border: '2px solid white',
       },
     },
   },
