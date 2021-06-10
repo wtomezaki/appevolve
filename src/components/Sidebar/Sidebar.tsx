@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, Drawer, Hidden, List, makeStyles, useTheme } from '@material-ui/core';
+import { Box, Drawer, Hidden, List, makeStyles, Typography, useTheme } from '@material-ui/core';
 import SidebarItem from './SidebarItem';
 import {
   ChartIcon,
   DashboardIcon,
   OrderIcon,
+  SettingsIcon,
   StoreIcon,
   SupportIcon,
   TagIcon,
@@ -12,6 +13,7 @@ import {
   VoucherIcon,
 } from '../../icons';
 import LogoIcon from '../../icons/LogoIcon';
+import { BadgeAvatar } from '..';
 
 const drawerWidth = 200;
 
@@ -26,6 +28,12 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
   },
   toolbar: theme.mixins.toolbar,
+  avatarName: {
+    fontWeight: 600,
+    fontSize: '14px',
+    lineHeight: '25px',
+    fontStyle: 'normal',
+  },
 }));
 
 export interface SidebarItems {
@@ -46,7 +54,7 @@ export const items = [
 ];
 
 const drawerContent = (
-  <List>
+  <List style={{ flexGrow: 1 }}>
     {items.map((item, index) => (
       <SidebarItem data={item} key={index} />
     ))}
@@ -104,6 +112,21 @@ const Sidebar = ({ mobileOpen, handleDrawerToggle, window }: Props): React.React
               <LogoIcon />
             </Box>
             {drawerContent}
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              height="108px"
+              borderTop="1px solid #8C8A98"
+              pl="16px"
+              pr="21px"
+            >
+              <BadgeAvatar name="Admin" imgSrc={`${process.env.PUBLIC_URL}/images/avatar.png`} />
+              <Box display="flex" justifyContent="space-between" alignItems="center" width="100%">
+                <Typography className={classes.avatarName}>Admin</Typography>
+                <SettingsIcon />
+              </Box>
+            </Box>
           </>
         </Drawer>
       </Hidden>
