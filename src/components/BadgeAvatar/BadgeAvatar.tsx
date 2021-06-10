@@ -2,7 +2,7 @@ import React from 'react';
 import { Theme, makeStyles, withStyles, createStyles } from '@material-ui/core/styles';
 import { Badge, Avatar } from '@material-ui/core';
 
-const StyledBadge = withStyles((theme: Theme) =>
+const StyledBadge = withStyles(() =>
   createStyles({
     badge: {
       height: '12px',
