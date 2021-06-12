@@ -5,8 +5,8 @@ import { Badge, Avatar } from '@material-ui/core';
 const StyledBadge = withStyles(() =>
   createStyles({
     badge: {
-      height: '12px',
-      width: '12px',
+      height: '28%',
+      width: '28%',
       backgroundColor: '#55A3AE',
       borderRadius: '100%',
       color: '#55A3AE',

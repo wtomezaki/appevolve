@@ -1,6 +1,17 @@
-import { makeStyles, createStyles, Theme, AppBar, Toolbar, Typography, IconButton, Hidden } from '@material-ui/core';
+import {
+  makeStyles,
+  createStyles,
+  Theme,
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Hidden,
+  Box,
+} from '@material-ui/core';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { BadgeAvatar } from '..';
 import { MenuIcon } from '../../icons';
 
 const drawerWidth = 200;
@@ -44,9 +55,14 @@ const Topbar = ({ handleDrawerToggle }: Props): React.ReactElement => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap style={{ textTransform: 'capitalize' }}>
-            {location.pathname.replace('/', '')}
-          </Typography>
+          <Box display="flex" justifyContent="center" flexGrow={1}>
+            <Typography variant="h5" noWrap style={{ fontWeight: 'bold', textTransform: 'capitalize' }}>
+              {location.pathname.replace('/', '')}
+            </Typography>
+          </Box>
+          <IconButton color="inherit" edge="end">
+            <BadgeAvatar name="Admin" imgSrc={`${process.env.PUBLIC_URL}/images/avatar.png`} />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </Hidden>
